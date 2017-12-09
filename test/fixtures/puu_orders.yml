@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_type: MyString
+  ordered_weight: 1
+  tara_weight: 1
+  total_weight: 1
+  net_weight: 1
+  direction: 1
+  customer: MyString
+  transporter_name: MyString
+  transporter_number: MyString
+  payment_type: MyString
+  state: MyString
+
+two:
+  product_type: MyString
+  ordered_weight: 1
+  tara_weight: 1
+  total_weight: 1
+  net_weight: 1
+  direction: 1
+  customer: MyString
+  transporter_name: MyString
+  transporter_number: MyString
+  payment_type: MyString
+  state: MyString

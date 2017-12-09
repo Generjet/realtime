@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product type:</strong>
+  <%= @puu_order.product_type %>
+</p>
+
+<p>
+  <strong>Ordered weight:</strong>
+  <%= @puu_order.ordered_weight %>
+</p>
+
+<p>
+  <strong>Tara weight:</strong>
+  <%= @puu_order.tara_weight %>
+</p>
+
+<p>
+  <strong>Total weight:</strong>
+  <%= @puu_order.total_weight %>
+</p>
+
+<p>
+  <strong>Net weight:</strong>
+  <%= @puu_order.net_weight %>
+</p>
+
+<p>
+  <strong>Direction:</strong>
+  <%= @puu_order.direction %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @puu_order.customer %>
+</p>
+
+<p>
+  <strong>Transporter name:</strong>
+  <%= @puu_order.transporter_name %>
+</p>
+
+<p>
+  <strong>Transporter number:</strong>
+  <%= @puu_order.transporter_number %>
+</p>
+
+<p>
+  <strong>Payment type:</strong>
+  <%= @puu_order.payment_type %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @puu_order.state %>
+</p>
+
+<%= link_to 'Edit', edit_puu_order_path(@puu_order) %> |
+<%= link_to 'Back', puu_orders_path %>

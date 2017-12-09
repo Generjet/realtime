@@ -1,0 +1,72 @@
+<%= form_for(puu_order) do |f| %>
+  <% if puu_order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(puu_order.errors.count, "error") %> prohibited this puu_order from being saved:</h2>
+
+      <ul>
+      <% puu_order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :product_type %>
+    <%= f.text_field :product_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ordered_weight %>
+    <%= f.number_field :ordered_weight %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tara_weight %>
+    <%= f.number_field :tara_weight %>
+  </div>
+
+  <div class="field">
+    <%= f.label :total_weight %>
+    <%= f.number_field :total_weight %>
+  </div>
+
+  <div class="field">
+    <%= f.label :net_weight %>
+    <%= f.number_field :net_weight %>
+  </div>
+
+  <div class="field">
+    <%= f.label :direction %>
+    <%= f.number_field :direction %>
+  </div>
+
+  <div class="field">
+    <%= f.label :customer %>
+    <%= f.text_field :customer %>
+  </div>
+
+  <div class="field">
+    <%= f.label :transporter_name %>
+    <%= f.text_field :transporter_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :transporter_number %>
+    <%= f.text_field :transporter_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :payment_type %>
+    <%= f.text_field :payment_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state %>
+    <%= f.text_field :state %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Puu Orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product type</th>
+      <th>Ordered weight</th>
+      <th>Tara weight</th>
+      <th>Total weight</th>
+      <th>Net weight</th>
+      <th>Direction</th>
+      <th>Customer</th>
+      <th>Transporter name</th>
+      <th>Transporter number</th>
+      <th>Payment type</th>
+      <th>State</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @puu_orders.each do |puu_order| %>
+      <tr>
+        <td><%= puu_order.product_type %></td>
+        <td><%= puu_order.ordered_weight %></td>
+        <td><%= puu_order.tara_weight %></td>
+        <td><%= puu_order.total_weight %></td>
+        <td><%= puu_order.net_weight %></td>
+        <td><%= puu_order.direction %></td>
+        <td><%= puu_order.customer %></td>
+        <td><%= puu_order.transporter_name %></td>
+        <td><%= puu_order.transporter_number %></td>
+        <td><%= puu_order.payment_type %></td>
+        <td><%= puu_order.state %></td>
+        <td><%= link_to 'Show', puu_order %></td>
+        <td><%= link_to 'Edit', edit_puu_order_path(puu_order) %></td>
+        <td><%= link_to 'Destroy', puu_order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Puu Order', new_puu_order_path %>
