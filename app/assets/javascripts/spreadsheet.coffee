@@ -5,14 +5,14 @@ App.spreadsheet =
     active_users: {}
 
     new_user: (user) ->
-        @active_users[user.id] = user
+        @active_users[user.customer] = user
         @render_active_users()
 
     remove_user: (user) ->
-        delete @active_users[user.id]
+        delete @active_users[user.customer]
         @render_active_users()
 
     render_active_users: () ->
         $('#active_users_list').html(
-            ("<li>#{user.id}</li>" for id,user of @active_users).join("")
+            ("<li>#{user.customer}</li>" for customer,user of @active_users).join("")
         )
